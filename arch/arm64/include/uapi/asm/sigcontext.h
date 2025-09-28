@@ -21,6 +21,12 @@
 
 #include <linux/types.h>
 
+#ifndef __aarch64__
+typedef void* __uint128_t;
+#endif
+
+/* 32-bit userspace shim: arm32 including arm64 UAPI */
+
 /*
  * Signal context structure - contains all info to do with the state
  * before the signal handler was invoked.
