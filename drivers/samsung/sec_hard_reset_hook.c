@@ -131,7 +131,8 @@ static enum hrtimer_restart hard_reset_hook_callback(struct hrtimer *hrtimer)
 
 	pr_err("Hard Reset\n");
 	hard_reset_occurred = true;
-	BUG();
+	// BUG();
+        pr_warn("Hard Reset skipped");
 	return HRTIMER_RESTART;
 }
 
